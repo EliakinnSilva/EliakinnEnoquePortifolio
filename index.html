@@ -12,14 +12,17 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+    <link rel="styleshee" href="css/components/body.css"/>
+     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
-    />
+      />
   </head>
   <body>
     <!-- navbar -->
     <nav class="navbar">
+      <link rel="stylesheet" href="css/components/body.css">
+      <link rel="stylesheet" href="css/components/dark-mode.css">
+      <link rel="stylesheet" href="css/components/botao.dark.css">
       <div class="navbar__content max-width mb-0">
         <a href="/"></a>
         <ul class="navbar__links">
@@ -39,6 +42,14 @@
             <li><a href="#footer">Contato</a></li>
           </ul>
         </div>
+        <div class="navbar__dark-mode">
+          <label class="switch">
+            <input type="checkbox" id="dark-mode-toggle" />
+            <span class="slider round"></span>
+          </label>
+          <span class="dark-mode-label"></span>
+        </div>
+        
       </div>
     </nav>
 
@@ -204,7 +215,7 @@
         </li>
       </ul>
     </section>
-
+    
     <!-- Footer -->
     <footer id="footer">
       <div class="footer__content max-width mb-0">
