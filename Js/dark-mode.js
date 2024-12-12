@@ -1,11 +1,14 @@
-<script>
-  // Função para trocar o modo dark
-  function toggleDarkMode() {
-    const body = document.body;
-    body.classList.toggle("dark-mode");
-  }
+function toggleDarkMode() {
+  const body = document.body;
+  body.classList.toggle("dark-mode");
 
-  // Event listener para o botão do modo dark
-  const darkModeToggle = document.getElementById("dark-mode-toggle");
-  darkModeToggle.addEventListener("change", toggleDarkMode);
-</script>
+  // Armazenar a preferência no localStorage
+  localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+}
+
+// Verificar a preferência armazenada ao carregar a página
+window.onload = function() {
+  if (localStorage.getItem('darkMode') === 'true') {
+    document.body.classList.add('dark-mode');
+  }
+};
